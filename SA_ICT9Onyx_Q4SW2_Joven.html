@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Q4 Seatwork 2</title>
+	<style type="text/css">
+		div {
+  			border: 2px solid black;
+  			margin-top: 50px;
+  			margin-bottom: 50px;
+  			margin-right: 130px;
+  			margin-left: 130px;
+  			padding-top: 30px;
+  			padding-right: 20px;
+  			padding-bottom: 30px;
+  			padding-left: 20px;
+		}
+		.center {
+  			text-align: center;
+		}
+		h1 {
+			text-align: center;
+			margin-top: 30px;
+		}
+		body {
+  			background-image: url(https://e1.pxfuel.com/desktop-wallpaper/795/622/desktop-wallpaper-calico-unveils-latest-of-aura-green-sky-blue-minimalistic.jpg);
+  			background-repeat: no-repeat;
+  			background-attachment: fixed;
+  			background-size: 100% 100%;
+		}
+		table {
+  			border-collapse: collapse;
+ 			width: 100%;
+		}
+
+		td, th {
+  			border: 1px solid black;
+  			text-align: left;
+  			padding: 8px;
+		}
+	</style>
+
+</head>
+<body>
+
+<h1 style="color:white;">TEMPERATURE CONVERSION</h1>
+
+<div style="background-color: #FFFFFF;" class="center">
+
+<h2>Date and Time in the City of Manila, Metro Manila</h3>
+
+<p id="today"></p>
+<script type="text/javascript" class="center">
+	const date = new Date ()
+	document.getElementById("today").innerHTML = date;
+</script>
+</div>
+
+<br>
+<hr>
+<br>
+
+<div style="background-color: #FFFFFF;" class="center">
+
+	<h2>FAHRENHEIT → CELCIUS</h1>
+	<br>
+	<form>
+		<label>Fahrenheit: </label>
+		<input type="number" id="inputFahrenheit" placeholder="Enter..." oninput="FahrenheitToCelsius(this.value)" onchange="FahrenheitToCelsius(this.value)">
+	</form>
+<br>
+	<form>Celsius: <span id="outputCelsius"></span></form>
+
+	<script type="text/javascript">
+		function FahrenheitToCelsius(valNum) {
+			valNum = parseFloat(valNum)
+			document.getElementById("outputCelsius").innerHTML=(valNum-32)/1.8
+		}
+	</script>
+</div>
+
+<br>
+<hr>
+<br>
+
+<div style="background-color: #FFFFFF;" class="center">
+
+	<h2>Conversion Table</h2>
+	<br>
+	<table>
+  <tr>
+    <th>Celsius (°C)</th>
+    <th>Fahrenheit (°F)</th>
+  </tr>
+  <tr>
+    <td>-273.15 °C</td>
+    <td>-459.67 °F</td>
+  </tr>
+  <tr>
+    <td>0 °C</td>
+    <td>32 °F</td>
+  </tr>
+  <tr>
+    <td>21 °C</td>
+    <td>69.8 °F</td>
+  </tr>
+  <tr>
+    <td>37 °C</td>
+    <td>98.6</td>
+  </tr>
+  <tr>
+    <td>100°C</td>
+    <td>212 °F</td>
+  </tr>
+</table>
+</div>
+
+</body>
+</html>
